@@ -25,7 +25,7 @@ mongoose.connection.on('error', () => {
 })
 
 
-app.post('notes', async (req, res) => {
+app.post('fruits', async (req, res) => {
     console.log(req.body.hasOwnProperty('text'))
     req.body.isReadyToEat === 'on' || req.body.isReadyToEat === true?
     req.body.isReadyToEat = true :
@@ -64,7 +64,7 @@ app.get('/fruits/:id', async (req, res) => {
     }    
 })
 
-app.put('/notes/:id', async (req, res) => {
+app.put('/fruits/:id', async (req, res) => {
     req.body.isReadyToEat === 'on' || req.body.isReadyToEat === true?
     req.body.isReadyToEat = true :
     req.body.isReadyToEat = false
